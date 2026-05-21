@@ -1,0 +1,15 @@
+START
+    INPUT hours, rate
+    
+    IF hours <= 40 THEN
+        regpay = hours * rate
+        ovtpay = 0
+    ELSE
+        regpay = 40 * rate
+        ovtpay = (hours - 40) * rate * 1.5
+    ENDIF
+    
+    netpay = regpay + ovtpay
+    
+    PRINT regpay, ovtpay, netpay
+END
